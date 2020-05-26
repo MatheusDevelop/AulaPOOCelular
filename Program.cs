@@ -17,7 +17,7 @@ namespace _01
         }
         public string Mensagem(string msg){
             if(state){
-                Console.WriteLine(msg);
+                Console.WriteLine("Sua mensagem : {0}",msg);
                 return "";
             }else{
                 Console.WriteLine("O celular esta desligado");
@@ -61,6 +61,7 @@ namespace _01
                     break;
            };
            inicio:
+           Console.WriteLine("----------------------------------------------");
            
            Console.WriteLine("Qual açao voce quer fazer?");
            Console.WriteLine("Digite MENSAGEM para enviar uma mensagem");
@@ -71,18 +72,24 @@ namespace _01
                case "MENSAGEM":
                     Console.WriteLine("Digite uma mensagem");
                     Cell.Mensagem(Console.ReadLine());
+                    goto inicio;
                     
                     break;
                 case "LIGAR":
                     Console.WriteLine("Digite o numero para ligaçao");
                     Cell.Ligar(Console.ReadLine());
+                    goto inicio;
+                    
                     break;
                 case "DESLIGAR":
                     Cell.Desligar();
+                    
                     break;
                default:
                     Console.WriteLine("Comando invalido");
-                    goto inicio;    
+                    Console.Clear();
+                    goto inicio;
+                    break;    
            }
            
            

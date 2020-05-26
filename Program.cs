@@ -60,10 +60,22 @@ namespace _01
                     Console.WriteLine("Comando invalido");
                     break;
            };
-           inicio:
-           Console.WriteLine("----------------------------------------------");
            
-           Console.WriteLine("Qual açao voce quer fazer?");
+           Console.WriteLine("_____________________");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|     hello world   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|___________________|");
+           Console.WriteLine("|                   |");
+           Console.WriteLine("|___________________|");
+           
+            inicio:
            Console.WriteLine("Digite MENSAGEM para enviar uma mensagem");
            Console.WriteLine("Digite LIGAR para uma ligaçao");
            Console.WriteLine("Digite DESLIGAR para desligar o celular");

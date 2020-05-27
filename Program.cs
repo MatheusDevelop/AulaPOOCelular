@@ -9,12 +9,13 @@ namespace _01
         // };
         public bool state=false;
         public bool Ligar(){
-            
-            Console.WriteLine("O celular ligou");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("O celular ligou :)");
+            Console.ResetColor();
             state =true;
-            Console.WriteLine("Digite uma marca de celular");
+            Console.WriteLine("\nDigite uma marca de celular");
             string marca= Console.ReadLine();
-            Console.WriteLine("Digite a cor do celular");
+            Console.WriteLine("\nDigite a cor do celular");
             string cor= Console.ReadLine();
                  
             Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -116,13 +117,15 @@ namespace _01
     {
         static void Main(string[] args){
            Celular Cell = new Celular();
-           Console.WriteLine("Digite ON para ligar");
+           Console.ForegroundColor = ConsoleColor.DarkCyan;
+           Console.WriteLine("\nDigite ON para ligar");
+           Console.ResetColor();
            switch(Console.ReadLine()){
                 case "ON":
                     Cell.Ligar();
                     break;
                 default:
-                    Console.WriteLine("Comando invalido");
+                    Console.WriteLine("Comando invalido, desligando...");
                     break;
            };
            
